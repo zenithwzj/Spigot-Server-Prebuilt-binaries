@@ -1,0 +1,21 @@
+name: release
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: ${{github.workspace}}\build.bat
+      - name: Post Release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          file: ${{github.workspace}}\spigot-1.20.1.jar
+          asset_name: spigot-1.20.1.jar
+          tag: "main"
+          overwrite: true
+          release_name: "Prebuilt Spigot server executable for 1.20.1"
+          body: "Prebuilt Spigot server executable for 1.20.1"
