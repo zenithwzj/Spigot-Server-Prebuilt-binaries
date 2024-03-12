@@ -34,9 +34,3 @@ jobs:
           asset_path: ${{github.workspace}}\spigot-1.20.1.jar
           asset_name: spigot-1.20.1.jar
           asset_content_type: application/java-archive
-          # file: ${{github.workspace}}\spigot-1.20.1.jar
-          # repo_token: ${{ secrets.GITHUB_TOKEN }}
-          # tag: ${{ github.ref }}
-          # overwrite: true
-          # release_name: "Prebuilt Spigot server executable for 1.20.1"
-          # body: "Prebuilt Spigot server executable for 1.20.1"
