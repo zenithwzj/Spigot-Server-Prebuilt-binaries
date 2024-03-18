@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: sudo bash -c ${{github.workspace}}/build.sh
+      - run: |
+          sudo chmod 777 ${{github.workspace}}/build.sh
+          sudo bash -c ${{github.workspace}}/build.sh
 
       - name: Upload Artifact to release
         uses: svenstaro/upload-release-action@v2
