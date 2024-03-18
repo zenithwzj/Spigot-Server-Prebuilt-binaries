@@ -17,8 +17,8 @@ jobs:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       #   with:
       #     tag_name: "main"
-      #     release_name: "Prebuilt Spigot server executable for 1.20.3"
-      #     body: "Prebuilt Spigot server executable for 1.20.3"
+      #     release_name: "Prebuilt Spigot server executable for 1.20.4"
+      #     body: "Prebuilt Spigot server executable for 1.20.4"
       #     draft: false
       #     prerelease: false
       # - name: Upload Artifact to release
@@ -27,8 +27,8 @@ jobs:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       #   with:
       #     upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-      #     asset_path: ${{github.workspace}}\spigot-1.20.3.jar
-      #     asset_name: spigot-1.20.3.jar
+      #     asset_path: ${{github.workspace}}\spigot-1.20.4.jar
+      #     asset_name: spigot-1.20.4.jar
       #     asset_content_type: application/java-archive
 
 
@@ -36,15 +36,15 @@ jobs:
       - name: Upload Artifact to release
         uses: svenstaro/upload-release-action@v2
         with:
-          file: ${{github.workspace}}\spigot-1.20.3.jar
+          file: ${{github.workspace}}\spigot-1.20.4.jar
           # repo_token: ${{ secrets.GITHUB_TOKEN }}
-          asset_name: spigot-1.20.3.jar
+          asset_name: spigot-1.20.4.jar
           tag: "main"
           overwrite: true
-          release_name: "Prebuilt Spigot server executable for 1.20.3"
-          body: "Prebuilt Spigot server executable for 1.20.3"
+          release_name: "Prebuilt Spigot server executable for 1.20.4"
+          body: "Prebuilt Spigot server executable for 1.20.4"
       - name: Upload Artifact to action
         uses: actions/upload-artifact@v1
         with: 
-          name: spigot-1.20.3
-          path: ${{github.workspace}}\spigot-1.20.3.jar
+          name: spigot-1.20.4
+          path: ${{github.workspace}}\spigot-1.20.4.jar
