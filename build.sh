@@ -20,7 +20,7 @@ mv -f BuildTools.jar SPBuild >/dev/null
 cd SPBuild
 
 echo [build] Building Spigot...
-../jre1.8.0_401/bin/java -jar BuildTools.jar --rev 1.10 
+../jre1.8.0_401/bin/java -jar BuildTools.jar --rev 1.9.4 
 if ! [ -e spigot-*.jar ] ;then
     >&2 echo '[build] Error Building Spigot! The script is going to exit...'
     exit
