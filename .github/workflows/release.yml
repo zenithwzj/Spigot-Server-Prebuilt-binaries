@@ -41,8 +41,8 @@ jobs:
           asset_name: spigot-1.20.4.jar
           tag: "main"
           overwrite: true
-          release_name: "Prebuilt Spigot server executable for 1.20.4"
-          body: "Prebuilt Spigot server executable for 1.20.4"
+          release_name: "Prebuilt Spigot server executable"
+          body: "Prebuilt Spigot server executable"
       - name: Upload Artifact to action
         uses: actions/upload-artifact@v1
         with: 
