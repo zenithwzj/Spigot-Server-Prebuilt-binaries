@@ -3,20 +3,20 @@ name: release
 on:
   push:
     branches: [ "main" ]
-
+env:
+  BUILD_VERSION: "1.11"
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: ${{github.workspace}}\build.bat
+      - run: ${{github.workspace}}/build.sh
 
       - name: Upload Artifact to release
         uses: svenstaro/upload-release-action@v2
         with:
-          file: ${{github.workspace}}\spigot.jar
-          # repo_token: ${{ secrets.GITHUB_TOKEN }}
-          asset_name: spigot-1.11.2-R0.1-SNAPSHOT.jar
+          file: ${{github.workspace}}/spigot.jar
+          asset_name: spigot-${{env.BUILD_VERSION}}.jar
           tag: "main"
           overwrite: true
           release_name: "Prebuilt Spigot server executable"
