@@ -1,10 +1,10 @@
 name: release
 
 on:
-  push:
-    branches: [ "main" ]
+  milestone: 
+    types: [ created , edited ]
 env:
-  BUILD_VERSION: "1.8"
+  BUILD_VERSION: "1.21"
 jobs:
   build:
     runs-on: ubuntu-latest

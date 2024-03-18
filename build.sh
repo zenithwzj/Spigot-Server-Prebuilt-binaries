@@ -1,10 +1,10 @@
-echo '[build] Downloading java8u401 archive ...'
-curl -L https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249542_4d245f941845490c91360409ecffb3b4 --output java8.tar.gz
-if ! [ -e java8.tar.gz ] ;then
-    >&2 echo '[build] Failed to download java8.tar.gz! The script is going to exit...'
+echo '[build] Downloading openjdk-21.0.2 archive ...'
+curl -L https://download.java.net/java/GA/jdk21.0.2/f2283984656d49d69e91c558476027ac/13/GPL/openjdk-21.0.2_linux-x64_bin.tar.gz --output openjdk-21.0.2.tar.gz
+if ! [ -e openjdk-21.0.2.tar.gz ] ;then
+    >&2 echo '[build] Failed to download openjdk-21.0.2.tar.gz! The script is going to exit...'
     exit
 fi
-tar -zxf java8.tar.gz
+tar -zxf openjdk-21.0.2.tar.gz
 
 
 echo '[build] Downloading BuildTools.jar ...'
@@ -20,7 +20,7 @@ mv -f BuildTools.jar SPBuild >/dev/null
 cd SPBuild
 
 echo [build] Building Spigot...
-../jre1.8.0_401/bin/java -jar BuildTools.jar --rev 1.8 
+../jdk-21.0.2/bin/java -jar BuildTools.jar --rev 1.21
 if ! [ -e spigot-*.jar ] ;then
     >&2 echo '[build] Error Building Spigot! The script is going to exit...'
     exit
