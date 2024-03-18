@@ -22,7 +22,7 @@ move /Y BuildTools.jar SPBuild >nul
 cd SPBuild
 
 echo [build.bat] Building Spigot...
-..\jdk-21.0.2\bin\java -jar BuildTools.jar --rev 1.19.2 
+..\jdk-17.0.2\bin\java -jar BuildTools.jar --rev 1.19.2 
 if not exist spigot-1.19.2.jar (
     echo [build.bat] Error Building Spigot! The script is going to exit...
     exit
