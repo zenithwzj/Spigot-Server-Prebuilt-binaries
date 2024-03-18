@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
 env:
-  BUILD_VERSION: "1.8.7"
+  BUILD_VERSION: "1.8.6"
 jobs:
   build:
     runs-on: ubuntu-latest
