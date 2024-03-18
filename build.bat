@@ -22,14 +22,14 @@ move /Y BuildTools.jar SPBuild >nul
 cd SPBuild
 
 echo [build.bat] Building Spigot...
-java -jar BuildTools.jar --rev 1.9.2 
-if not exist spigot-1.9.2.jar (
+java -jar BuildTools.jar --rev 1.9.1 
+if not exist spigot-1.9.1.jar (
     echo [build.bat] Error Building Spigot! The script is going to exit...
     exit
 ) else echo [build.bat] Build success!
 cd ..
 
 echo [build.bat] Exporting built artifacts ...
-move /Y SPBuild\spigot-1.9.2.jar .\ >nul
+move /Y SPBuild\spigot-1.9.1.jar .\ >nul
 echo [build.bat] Removing src ...
 rd /S /Q SPBuild
