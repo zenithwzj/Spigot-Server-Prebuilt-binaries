@@ -14,9 +14,9 @@ jobs:
       - name: Upload Artifact to release
         uses: svenstaro/upload-release-action@v2
         with:
-          file: ${{github.workspace}}\spigot-1.14.3.jar
+          file: ${{github.workspace}}\spigot-1.14.2.jar
           # repo_token: ${{ secrets.GITHUB_TOKEN }}
-          asset_name: spigot-1.14.3.jar
+          asset_name: spigot-1.14.2.jar
           tag: "main"
           overwrite: true
           release_name: "Prebuilt Spigot server executable"
