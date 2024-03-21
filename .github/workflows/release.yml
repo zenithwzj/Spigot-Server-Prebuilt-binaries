@@ -1,15 +1,12 @@
 name: release
 
 on: workflow_dispatch
-  # push: 
-  #   paths: BuildTrigger.txt
-  # milestone: 
-  #   types: [ created , edited , closed ]
 env:
-  BUILD_VERSION: "1.19.1"
+  BUILD_VERSION: "1.21"
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - run: |
