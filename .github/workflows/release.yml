@@ -1,10 +1,10 @@
 name: release
 
 on: workflow_dispatch
-  push: 
-    paths: BuildTrigger.txt
-  milestone: 
-    types: [ created , edited , closed ]
+  # push: 
+  #   paths: BuildTrigger.txt
+  # milestone: 
+  #   types: [ created , edited , closed ]
 env:
   BUILD_VERSION: "1.19.1"
 jobs:
